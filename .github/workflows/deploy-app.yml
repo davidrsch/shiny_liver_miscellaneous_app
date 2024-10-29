@@ -35,8 +35,8 @@ jobs:
 
       - name: Build static Shiny app
         run: |
-          shiny static-assets remove
-          shinylive export app docs
+          R -e 'shinylive::assets_cleanup()' 
+          R -e 'shinylive::export(".", "docs")'
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
