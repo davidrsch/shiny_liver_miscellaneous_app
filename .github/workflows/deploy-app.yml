@@ -36,7 +36,7 @@ jobs:
       - name: Build static Shiny app
         run: |
           R -e 'shinylive::assets_cleanup()' 
-          R -e 'shinylive::export(".", "docs")'
+          R -e 'shinylive::export("app", "docs")'
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -45,4 +45,3 @@ jobs:
           publish_dir: ./docs
           publish_branch: gh-pages
           allow_empty_commit: true
-          keep_files: true
