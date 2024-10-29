@@ -25,7 +25,6 @@ jobs:
 
       - name: Build static Shiny app
         run: |
-          source pyenv/bin/activate
           shiny static-assets remove
           shinylive export app docs
 
