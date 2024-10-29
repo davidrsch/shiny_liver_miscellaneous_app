@@ -20,6 +20,7 @@ jobs:
           packages=(
             # List each package on a separate line.
             libarchive-dev
+            libcurl4-openssl-dev
           )
           sudo apt-get update
           sudo apt-get install --yes "${packages[@]}"
